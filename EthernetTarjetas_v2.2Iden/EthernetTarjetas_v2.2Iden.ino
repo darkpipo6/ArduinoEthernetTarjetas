@@ -26,8 +26,6 @@ String readString = ""; // string para recibir datos de la web
 boolean statusLed = false; // estatus del led
 char Fichero[fila][contenido];
 
-
-
 void setup(){
     // almacenar();
     pinMode(26,OUTPUT);
@@ -264,7 +262,6 @@ void mensaje(){
     lcd.print("Tarjeta...");
 }
 
-
 void borrar(){
     SD.remove("test.txt");
     delay(50);
@@ -286,6 +283,7 @@ void borrar(){
     }
     
 }
+
 String LeerRegistros(String tag){
     File myFile;
     char dato;
@@ -310,6 +308,7 @@ String LeerRegistros(String tag){
         Serial.println("error opening test.txt");
     }
 }
+
 String verificar (){ //depurador
     int x=0;
     digitalWrite(26,HIGH); //led que indica que la tarjeta esta esperando datos
